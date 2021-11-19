@@ -1,5 +1,10 @@
 const Player = require('../lib/Player');
 
+const Potion = require('../lib/Potion');
+
+jest.mock('../lib/potion');
+
+
 test('creates a player object', () => {
   const player = new Player('Dave');
 
@@ -7,4 +12,7 @@ test('creates a player object', () => {
   expect(player.health).toEqual(expect.any(Number));
   expect(player.strength).toEqual(expect.any(Number));
   expect(player.agility).toEqual(expect.any(Number));
+  expect(player.inventory).toEqual(
+    expect.arraryContaining([expect.any(Object)])
+  );
 });
