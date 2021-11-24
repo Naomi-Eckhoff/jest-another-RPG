@@ -9,7 +9,7 @@ test('creates an enemy object', () => {
   expect(enemy.name).toBe('goblin');
   expect(enemy.weapon).toBe('sword');
   expect(enemy.health).toEqual(expect.any(Number));
-  expect(enemy.strength).toEqual(expect.any(Numaber));
+  expect(enemy.strength).toEqual(expect.any(Number));
   expect(enemy.agility).toEqual(expect.any(Number));
   expect(enemy.potion).toEqual(expect.any(Object));
 });
